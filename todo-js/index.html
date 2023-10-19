@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+      
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=7">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        
+     
+        <title>ToDo List</title>
+
+      
+        <script src="js/mainJS.js"></script>
+
+       
+        <link rel="stylesheet" href="css/style.css">
+
+    
+        <link rel="icon" href ="images/spiral-notepad.png" type="image/icon type"> 
+
+    </head>
+  
+    <body onload="getDOMs();loadTasksARefresh();loadTasks();displayTasks();">
+
+        <header>
+            <h2>ToDo List</h2>
+        </header>
+  
+      
+        <section class="insert-tasks" id="insertasks">
+                <h2>New Task:</h2>
+                <ul>
+                    Title:
+                </ul>
+                <ul>
+                    <input type="text" class="title" id="title">
+                </ul>
+                <ul>
+                    Description:
+                </ul>
+                <ul>
+                    <textarea id="content" class="content"></textarea>
+                </ul>
+                <div class="wrapper-a">
+                    <input type="button" class="btn" value="Insert" onclick="insert();">
+                    <input type="button" class="btn" value="Cancel" onclick="hideInsertTasks();">
+                </div>
+                <div class="error">
+                    <span id="error"></span>
+                </div>
+        </section>
+
+      
+        <section class="tasks-list">
+            <span class="tasksoutput" id="tasksoutput"></span>
+        </section>
+
+       
+        <input type="button" class="btn deletebtn" id="standart-rem" value="Delete all Tasks" onclick="clearTasks();">
+
+       
+        <input type="button" value="+" class="insert-btn" id="insertbtn" onclick="showInsertTasks();">
+
+    </body>
+</html>
